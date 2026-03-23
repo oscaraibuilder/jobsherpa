@@ -1,0 +1,17 @@
+<svg width="200" height="260" viewBox="0 0 200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="260" fill="#fdf4ff"/>
+  <rect x="0" y="0" width="200" height="60" fill="linear-gradient(135deg, #a855f7 0%, #ec4899 100%)"/>
+  <rect x="0" y="0" width="200" height="60" fill="#a855f7"/>
+  <rect x="15" y="15" width="100" height="12" rx="2" fill="#fdf4ff"/>
+  <rect x="15" y="32" width="70" height="5" rx="1" fill="#e9d5ff"/>
+  <rect x="15" y="42" width="50" height="4" rx="1" fill="#d8b4fe"/>
+  <rect x="10" y="70" width="80" height="5" rx="1" fill="#7c3aed"/>
+  <rect x="10" y="80" width="180" height="3" rx="1" fill="#e9d5ff"/>
+  <rect x="10" y="87" width="175" height="3" rx="1" fill="#e9d5ff"/>
+  <rect x="10" y="100" width="60" height="5" rx="1" fill="#7c3aed"/>
+  <rect x="10" y="110" width="85" height="25" rx="3" fill="#f3e8ff"/>
+  <rect x="105" y="110" width="85" height="25" rx="3" fill="#f3e8ff"/>
+  <rect x="10" y="145" width="60" height="5" rx="1" fill="#7c3aed"/>
+  <rect x="10" y="155" width="180" height="3" rx="1" fill="#e9d5ff"/>
+  <text x="160" y="200" font-family="system-ui" font-size="32" font-weight="bold" fill="#c4b5fd">P</text>
+</svg>

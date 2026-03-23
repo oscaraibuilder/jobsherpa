@@ -1,0 +1,111 @@
+<div class="page modern-tech">
+  <div class="header">
+    <h1>{{contact.fullName}}</h1>
+    {{#if contact.headline}}<h2>{{contact.headline}}</h2>{{/if}}
+    {{#if skillGroups.length}}
+    <div class="tags">
+      {{#with skillGroups.[0]}}
+        {{#each items}}
+        <span class="tag">{{this}}</span>
+        {{/each}}
+      {{/with}}
+    </div>
+    {{/if}}
+  </div>
+
+  <div class="content">
+    <div class="main">
+      {{#if summary}}
+      <section class="section">
+        <h3>Summary</h3>
+        <p>{{summary}}</p>
+      </section>
+      {{/if}}
+
+      {{#if experiences.length}}
+      <section class="section">
+        <h3>Experience</h3>
+        {{#each experiences}}
+        <div class="job">
+          <h4>{{jobTitle}}</h4>
+          <div class="meta">{{company}}{{#if location}} | {{location}}{{/if}}{{#if startDate}} | {{startDate}}{{/if}}{{#if endDate}} - {{endDate}}{{/if}}</div>
+          {{#if bullets.length}}
+          <ul>
+            {{#each bullets}}<li>{{this}}</li>{{/each}}
+          </ul>
+          {{/if}}
+        </div>
+        {{/each}}
+      </section>
+      {{/if}}
+
+      {{#if education.length}}
+      <section class="section">
+        <h3>Education</h3>
+        {{#each education}}
+        <div class="edu">
+          <h4>{{degree}}</h4>
+          <div class="meta">{{institution}}{{#if location}} | {{location}}{{/if}}{{#if endDate}} | {{endDate}}{{/if}}</div>
+        </div>
+        {{/each}}
+      </section>
+      {{/if}}
+    </div>
+
+    <aside class="sidebar">
+      <section class="section">
+        <h3>Contact</h3>
+        <div class="contact-info">
+          {{#if contact.email}}<p>{{contact.email}}</p>{{/if}}
+          {{#if contact.phone}}<p>{{contact.phone}}</p>{{/if}}
+          {{#if contact.location}}<p>{{contact.location}}</p>{{/if}}
+          {{#if contact.linkedInUrl}}<p>{{contact.linkedInUrl}}</p>{{/if}}
+          {{#if contact.websiteUrl}}<p>{{contact.websiteUrl}}</p>{{/if}}
+        </div>
+      </section>
+
+      {{#if highlights.length}}
+      {{#with highlights.[0]}}
+      <section class="section">
+        <h3>{{title}}</h3>
+        <ul>
+          {{#each bullets}}<li>{{this}}</li>{{/each}}
+        </ul>
+      </section>
+      {{/with}}
+      {{/if}}
+
+      {{#if skillGroups.length}}
+      <section class="section">
+        <h3>Skills</h3>
+        {{#each skillGroups}}
+        <h4>{{label}}</h4>
+        <ul class="skill-tags">
+          {{#each items}}<li>{{this}}</li>{{/each}}
+        </ul>
+        {{/each}}
+      </section>
+      {{/if}}
+
+      {{#if coursesOrCerts.length}}
+      <section class="section">
+        <h3>Certifications</h3>
+        <ul>
+          {{#each coursesOrCerts}}<li>{{title}}{{#if year}} ({{year}}){{/if}}</li>{{/each}}
+        </ul>
+      </section>
+      {{/if}}
+
+      {{#if extraSections.length}}
+      {{#with extraSections.[0]}}
+      <section class="section">
+        <h3>{{title}}</h3>
+        <ul>
+          {{#each bullets}}<li>{{this}}</li>{{/each}}
+        </ul>
+      </section>
+      {{/with}}
+      {{/if}}
+    </aside>
+  </div>
+</div>

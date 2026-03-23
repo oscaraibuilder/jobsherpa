@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@page {
+  size: letter;
+  margin: 0;
+}
+
+.page {
+  width: 816px;
+  height: 1056px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 10pt;
+  line-height: 1.4;
+  color: #14532d;
+  background: #f0fdf4;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  padding: 30px 40px 20px;
+  border-top: 4px solid #16a34a;
+  border-bottom: 2px solid #16a34a;
+}
+
+.header h1 {
+  font-size: 22pt;
+  font-weight: 700;
+  color: #14532d;
+  margin-bottom: 6px;
+}
+
+.header h2 {
+  font-size: 11pt;
+  font-weight: 400;
+  color: #166534;
+  margin-bottom: 10px;
+}
+
+.header .credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 9pt;
+  color: #15803d;
+}
+
+.header .credentials span {
+  background: #dcfce7;
+  padding: 3px 10px;
+  border-radius: 3px;
+  border: 1px solid #bbf7d0;
+}
+
+.content {
+  flex: 1;
+  padding: 25px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section > h3 {
+  font-size: 11pt;
+  font-weight: 700;
+  color: #14532d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #22c55e;
+  padding-bottom: 4px;
+}
+
+.section > p {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #166534;
+  text-align: justify;
+}
+
+.job, .edu {
+  margin-bottom: 12px;
+}
+
+.job h4, .edu h4 {
+  font-size: 11pt;
+  font-weight: 600;
+  color: #14532d;
+}
+
+.job .meta, .edu .meta {
+  font-size: 9pt;
+  color: #15803d;
+  font-style: italic;
+  margin-top: 2px;
+  margin-bottom: 5px;
+}
+
+.job ul, .edu ul {
+  margin-left: 16px;
+  list-style-type: disc;
+}
+
+.job ul li, .edu ul li {
+  font-size: 9pt;
+  color: #166534;
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.skill-group h4 {
+  font-size: 10pt;
+  font-weight: 600;
+  color: #166534;
+  margin-bottom: 6px;
+  border-bottom: 1px solid #bbf7d0;
+  padding-bottom: 3px;
+}
+
+.skill-group ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-group ul li {
+  font-size: 9pt;
+  color: #15803d;
+  margin-bottom: 3px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.skill-group ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 5px;
+  height: 5px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.publications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.publications li {
+  font-size: 9pt;
+  color: #166534;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+  line-height: 1.4;
+}
+
+.publications li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 6px;
+  height: 6px;
+  background: #16a34a;
+  border-radius: 1px;
+}
+
+.certifications ul {
+  list-style: none;
+  padding: 0;
+}
+
+.certifications li {
+  font-size: 9pt;
+  color: #15803d;
+  margin-bottom: 4px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.certifications li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .page {
+    page-break-after: always;
+  }
+}

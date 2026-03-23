@@ -1,0 +1,7 @@
+[
+  { "id": "classic-sidebar", "name": "Classic Sidebar", "thumbnail": "/templates/classic-sidebar/thumbnail.svg" },
+  { "id": "modern-tech", "name": "Modern Tech", "thumbnail": "/templates/modern-tech/thumbnail.svg" },
+  { "id": "corporate-finance", "name": "Corporate Finance", "thumbnail": "/templates/corporate-finance/thumbnail.svg" },
+  { "id": "creative-portfolio", "name": "Creative Portfolio", "thumbnail": "/templates/creative-portfolio/thumbnail.svg" },
+  { "id": "clinical-academic", "name": "Clinical / Academic", "thumbnail": "/templates/clinical-academic/thumbnail.svg" }
+]

@@ -1,0 +1,89 @@
+<div class="page creative-portfolio">
+  <div class="header">
+    <h1>{{contact.fullName}}</h1>
+    {{#if contact.headline}}<h2>{{contact.headline}}</h2>{{/if}}
+    <div class="contact-row">
+      {{#if contact.email}}<span>{{contact.email}}</span>{{/if}}
+      {{#if contact.phone}}<span>{{contact.phone}}</span>{{/if}}
+      {{#if contact.location}}<span>{{contact.location}}</span>{{/if}}
+      {{#if contact.websiteUrl}}<span>{{contact.websiteUrl}}</span>{{/if}}
+      {{#if contact.linkedInUrl}}<span>{{contact.linkedInUrl}}</span>{{/if}}
+    </div>
+  </div>
+
+  <div class="content">
+    {{#if summary}}
+    <section class="section">
+      <h3>About Me</h3>
+      <p>{{summary}}</p>
+    </section>
+    {{/if}}
+
+    {{#if extraSections.length}}
+    <section class="section">
+      <h3>{{extraSections.[0].title}}</h3>
+      <div class="projects-grid">
+        {{#each extraSections.[0].bullets}}
+        <div class="project-card">
+          <p>{{this}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </section>
+    {{/if}}
+
+    {{#if experiences.length}}
+    <section class="section">
+      <h3>Experience</h3>
+      {{#each experiences}}
+      <div class="job">
+        <h4>{{jobTitle}}</h4>
+        <div class="meta">{{company}}{{#if location}} | {{location}}{{/if}}{{#if startDate}} | {{startDate}}{{/if}}{{#if endDate}} - {{endDate}}{{/if}}</div>
+        {{#if bullets.length}}
+        <ul>
+          {{#each bullets}}<li>{{this}}</li>{{/each}}
+        </ul>
+        {{/if}}
+      </div>
+      {{/each}}
+    </section>
+    {{/if}}
+
+    <div class="two-column">
+      {{#if skillGroups.length}}
+      <section class="section skills-section">
+        <h3>Skills</h3>
+        {{#each skillGroups}}
+        <div class="skill-category">
+          <h4>{{label}}</h4>
+          <div class="skill-pills">
+            {{#each items}}<span>{{this}}</span>{{/each}}
+          </div>
+        </div>
+        {{/each}}
+      </section>
+      {{/if}}
+
+      {{#if highlights.length}}
+      <section class="section highlights-section">
+        <h3>{{highlights.[0].title}}</h3>
+        <ul>
+          {{#each highlights.[0].bullets}}<li>{{this}}</li>{{/each}}
+        </ul>
+      </section>
+      {{/if}}
+    </div>
+
+    {{#if education.length}}
+    <section class="section">
+      <h3>Education</h3>
+      {{#each education}}
+      <div class="edu">
+        <h4>{{degree}}</h4>
+        <div class="meta">{{institution}}{{#if location}} | {{location}}{{/if}}{{#if endDate}} | {{endDate}}{{/if}}</div>
+      </div>
+      {{/each}}
+    </section>
+    {{/if}}
+  </div>
+</div>
